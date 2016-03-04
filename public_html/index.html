@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <meta charset="UTF-8">
+                <style>
+.div
+{ 
+    border: 1px solid black;
+ height: 48px;
+ margin-left: 3px;
+ margin-top: 3px;
+ display: inline-block;
+ line-height: 48px;
+}
+.div{
+ width: 48px;
+}
+
+.container{
+ width: 170px;
+ height: 170px;
+ border: 3px solid blue;
+ margin: auto
+}
+
+#container{
+ width: 226px;
+ height: 274px;
+ border: 3px solid blue;
+ margin: auto
+}
+.t1, .t4{
+ border: 1px solid black;
+ height: 48px;
+ margin-left: 3px;
+ margin-top: 3px;
+ display: inline-block;
+ text-align: center;
+ line-height: 48px;
+}
+.t1{
+ width: 48px;
+}
+.t4{
+ width: 219px;
+}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="1" onclick="hide(this.id)" style="height: 100px; width: 100px; background-color: darkgray">
+                
+        </div>
+        <div id="2" onclick="incfontsize(3)" onmouseover="addborder(this.id)" onmouseout="removeborder(this.id)" style="height: 100px; width: 100px; background-color: darkviolet">
+            
+        </div>
+        <div id="3" style="height: 100px; width: 100px; background-color: darkred"> 
+            some random text
+        </div>
+
+        <hr>
+
+        <div class="container" id="numbersdivcontainer">
+        <div class="div" id ="numbersdiv1">1</div>
+        <div class="div" id ="numbersdiv2">2</div>
+        <div class="div" id ="numbersdiv3">3</div>
+        <div class="div" id ="numbersdiv4">4</div>
+        <div class="div" id ="numbersdiv5">5</div>
+        <div class="div" id ="numbersdiv6">6</div>
+        <div  class="div" id ="numbersdiv7">7</div>
+        <div  class="div" id ="numbersdiv8">8</div>
+        <div class="div" id ="numbersdiv9">9</div>
+        </div>
+         
+         <hr>
+         
+         <ul>
+             <li>a</li>
+             <li>b</li>
+             <li>c</li>
+             <li>d</li>
+             <li>e</li>
+             <li>f</li>
+             <li>g</li>
+             <li>h</li>
+             <li>i</li>
+             <li>j</li>
+         </ul>
+         
+         
+
+         <hr>
+
+
+         <img class="shuffleimg" style="width:250px; height:250px;" src="http://static.independent.co.uk/s3fs-public/thumbnails/image/2013/01/24/12/v2-cute-cat-picture.jpg">
+         <img class="shuffleimg" style="width:250px; height:250px;" src="http://i.telegraph.co.uk/multimedia/archive/03235/potd-husky_3235255k.jpg">
+         <img  class="shuffleimg" style="width:250px; height:250px;" src="http://cdn-01.belfasttelegraph.co.uk/incoming/article31552045.ece/82fe0/ALTERNATES/w620/US%20Monkey%201550.jpg">
+         <img class="shuffleimg" style="width:250px; height:250px;" src="http://cdn2-www.dogtime.com/assets/uploads/gallery/25-funny-dog-memes-part-2/14-funny-dog-meme.jpg">
+         <img  class="shuffleimg" style="width:250px; height:250px;" src="http://999konycountry.com/wp-content/uploads/2015/12/funny-videos.jpg">
+         
+         
+         <hr>
+         
+         
+         <form id='register' action='' method='get'
+    accept-charset='UTF-8'>
+<fieldset >
+<legend>Register</legend>
+
+<input type='text' name='name' id='name' maxlength="50" required/>
+<label for='name' >Your Full Name*: </label><br><br>
+
+<input type='text' name='email' id='email' maxlength="50" required/>
+ <label for='email' >Email Address*:</label><br><br>
+
+<input type='text' name='username' id='username' maxlength="50" required />
+ <label for='username' >UserName*:</label><br><br>
+
+<input type='password' name='password' id='password' maxlength="50" required/>
+<label for='password' >Password*:</label><br><br>
+<input type='submit' name='Submit' value='Submit' />
+
+</fieldset>
+</form>
+         
+         <hr>
+         
+         <div id="tablediv">
+             
+             
+         </div>
+         
+         <hr>
+         
+         
+         <div id="container">
+ <div id="display" class="t4"></div>
+
+ <div id="seven" class="t1" onclick="calculate(this.innerHTML)">7</div>
+ <div id="eight" class="t1" onclick="calculate(this.innerHTML)">8</div>
+ <div id="nine" class="t1" onclick="calculate(this.innerHTML)">9</div>
+ <div id="divide" class="t1" onclick="calculate(this.innerHTML)">/</div>
+
+ <div id="four" class="t1" onclick="calculate(this.innerHTML)">4</div>
+ <div id="five" class="t1" onclick="calculate(this.innerHTML)">5</div>
+ <div id="six" class="t1" onclick="calculate(this.innerHTML)">6</div>
+ <div id="multiply" class="t1" onclick="calculate(this.innerHTML)">*</div>
+
+ <div id="one" class="t1" onclick="calculate(this.innerHTML)">1</div>
+ <div id="two" class="t1" onclick="calculate(this.innerHTML)">2</div>
+ <div id="three" class="t1" onclick="calculate(this.innerHTML)">3</div>
+ <div id="minus" class="t1" onclick="calculate(this.innerHTML)">-</div>
+
+ <div id="zero" class="t1" onclick="calculate(this.innerHTML)">0</div>
+ <div id="comma" class="t1" onclick="calculate(this.innerHTML)">,</div>
+ <div id="plus" class="t1" onclick="calculate(this.innerHTML)">+</div>
+ <div id="equal" class="t1" onclick="calculate(this.innerHTML)">=</div>
+
+ 
+</div>
+         
+         
+         
+         
+          <script src="newjavascript.js" type="text/javascript"></script>
+    </body>
+    
+</html>
